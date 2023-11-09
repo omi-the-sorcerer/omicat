@@ -1,7 +1,5 @@
 <template>
-  <div class="bubble bubble-bottom-left typewrite" data-period="2000" data-type='[
-            "🐈 ¡Miauloper! 🐈"
-        ]'>
+  <div class="bubble bubble-bottom-left typewrite" data-period="2000">
     <span class="wrap"></span>
   </div>
 </template>
@@ -77,23 +75,54 @@
 </style>
 
 <script>
+let phrases = [
+  "😺✨ Hello, human! I'm Omi, the coding cat. Developing purr-fect websites and applications since 9 lives ago.",
+  "😼💬 Did you know that cats are the masters of the secret code?",
+  "😼💬 I'm here to unravel those computer mysteries for you!",
+  "🐭🚫🐾 Special skill: Detecting bugs faster than a mouse runs!",
+  "😼💻 In a world of bits and bytes, I'm the cat biting the code!",
+  "😹🖱️💡 Why are cats good programmers? Because they always find the 'mouse'.",
+  "🧶📄 My resume is as long as an infinite string of yarn.  But don't worry, I'll make it easy to rea",
+  "🐾👩‍💻 Ever heard of the new programming language 'MeowScript'? I'm its creator!",
+  "😺🌐 Meow-ta here! Ready for a feline user experience?",
+  "🤔🐟🖥️ Sometimes I wonder if the mouse on the screen tastes like fish...",
+  "🐶👏💻 My code is so efficient, even dogs applaud it.",
+  "😼⌨️ Want an awesome website? Let me scratch the keyboard for you!",
+  "😴💡 The only thing I hate more than code errors is closed boxes. Give me freedom or give me tuna!",
+  "😸☀️💻 Meowgnificent day for coding, don't you think?",
+  "😴💡 How many coding cats does it take to change a lightbulb? None, we prefer darkness for napping.",
+  "🐾📜 Rumors say my code is written in Scratch. Literally!",
+  "🐭💻 Time to stop playing with the mouse and start coding with it!",
+  "😼🔧 What does a coding cat do when something doesn't work? Purr-sist until it's solved.",
+  "🌀🐾 When I'm not coding, you'll find me chasing recursive tails.",
+  "😸👣💻 Why do cats love web development? Because we always land on our feet in the code!",
+  "😼🚀 My level of expertise: Expert at gracefully escaping errors!"
+]
 var TxtType = function(el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
+  this.actualText = 0
   this.period = parseInt(period, 10) || 2000;
   this.txt = '';
   this.array = [];
+
   this.tick();
+
   this.isDeleting = false;
   this.videoFaded = false;
   this.imageFaded = false;
+  this.randomActualText = function () {
+    this.actualText = Math.floor(Math.random() * this.toRotate.length)
+  }
 };
 
 let times = 100000000000
 let timeouts = []
 TxtType.prototype.tick = function() {
-  var i = this.loopNum % this.toRotate.length;
+  // var i = this.loopNum % this.toRotate.length;
+  let i = this.actualText
+
   var image = ''
   var video = ''
   if(typeof this.toRotate[i] === 'object') {
@@ -129,7 +158,7 @@ TxtType.prototype.tick = function() {
   this.el.innerHTML = '<span class="wrap">'+this.array.join('')+'</span>';
 
   var that = this;
-  var delta = 170 - Math.random() * 100;
+  var delta = 140 - Math.random() * 100;
 
   if (this.isDeleting) { delta /= 3; }
 
@@ -146,7 +175,8 @@ TxtType.prototype.tick = function() {
     this.imageFaded = false;
     this.isDeleting = false;
     this.loopNum++;
-    delta = 500;
+    delta=500
+    this.randomActualText()
   }
 
   timeouts.push(
@@ -165,10 +195,10 @@ TxtType.prototype.tick = function() {
 const startTyping = () => {
   var elements = document.getElementsByClassName('typewrite');
   for (var i=0; i<elements.length; i++) {
-    var toRotate = elements[i].getAttribute('data-type');
+    var toRotate = phrases;
     var period = elements[i].getAttribute('data-period');
     if (toRotate) {
-      new TxtType(elements[i], JSON.parse(toRotate), period);
+      new TxtType(elements[i], toRotate, period);
     }
   }
 };
@@ -192,7 +222,7 @@ const changeTexts = (texts) => {
   for (var i = 0; i < timeouts.length; i++) {
     clearTimeout(timeouts[i]);
   }
-  $(".typewrite").attr("data-type", JSON.stringify(texts))
+  // $(".typewrite").attr("data-type", JSON.stringify(texts))
   startTyping()
 }
 
