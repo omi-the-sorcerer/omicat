@@ -1,6 +1,6 @@
 <template>
   <div class="bubble bubble-bottom-left typewrite" data-period="2000" data-type='[
-            "🐈 ¡Miauloper! 🐈",
+            "🐈 ¡Miauloper! 🐈"
         ]'>
     <span class="wrap"></span>
   </div>
