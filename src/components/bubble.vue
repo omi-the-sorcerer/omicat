@@ -1,9 +1,6 @@
 <template>
   <div class="bubble bubble-bottom-left typewrite" data-period="2000" data-type='[
-            "🐈 ¡Miau miau! 🐈",
-            "💚 Prrrrrrrrrrr 💚",
-            "🍴 Barriguita llena 🍴, 💚 corazón contento 💚",
-            "🌟 Brillas más que las estrellas 🌟"
+            "🐈 ¡Miauloper! 🐈",
         ]'>
     <span class="wrap"></span>
   </div>
