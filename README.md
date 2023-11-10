@@ -2,6 +2,8 @@
 
 ¡Bienvenido a mi espacio personal en la web! Aquí encontrarás mi curriculum vitae y mi portafolio, todo presentado de una manera única y divertida: ¡con un gato que te sigue con la mirada mientras mueves el ratón! 😺
 
+![Omicat](home.png)
+
 ## ¿Cómo funciona?
 
 Simplemente mueve el ratón y observa cómo el gato te sigue con sus ojos curiosos. ¡Espero que disfrutes de la experiencia tanto como yo disfruto programándola!
