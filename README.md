@@ -1,14 +1,25 @@
-# omicat
+# Mi Landing Page Felina 🐾
 
-This template should help get you started developing with Vue 3 in Vite.
+¡Bienvenido a mi espacio personal en la web! Aquí encontrarás mi curriculum vitae y mi portafolio, todo presentado de una manera única y divertida: ¡con un gato que te sigue con la mirada mientras mueves el ratón! 😺
 
-## Recommended IDE Setup
+## ¿Cómo funciona?
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Simplemente mueve el ratón y observa cómo el gato te sigue con sus ojos curiosos. ¡Espero que disfrutes de la experiencia tanto como yo disfruto programándola!
 
-## Customize configuration
+## Contenidos
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- **CV:** Encuentra mi curriculum vitae actualizado con información sobre mi educación, experiencia laboral y habilidades.
+- **Portafolio:** Explora algunos de los proyectos en los que he trabajado. Desde desarrollo web hasta aplicaciones, ¡hay un poco de todo!
+
+## Tecnologías utilizadas
+
+Este proyecto está construido con amor y las siguientes tecnologías:
+
+- VUE
+- Vite
+- JavaScript
+
+¡Sientete libre de explorar el código fuente y adaptarlo a tus necesidades!
 
 ## Project Setup
 
